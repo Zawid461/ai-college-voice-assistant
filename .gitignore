@@ -1,0 +1,24 @@
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
+app/.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Audio files
+*.mp3
+*.wav
+
+# FAISS database
+faiss_index/
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
