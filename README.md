@@ -1,56 +1,183 @@
 # 🎓 AI College Voice Assistant
 
-An AI-powered realtime college voice assistant built using:
+An AI-powered realtime voice assistant designed for educational institutions to automate student support and college information services.
 
-* Deepgram (Speech-to-Text)
-* Groq LLM
-* ElevenLabs (Text-to-Speech)
-* LangChain + FAISS (RAG)
-* Python
+This project enables students to interact with an intelligent college assistant using natural voice conversations. The assistant can answer queries related to admissions, courses, placements, departments, facilities, and academic information using voice-based interaction.
 
-## Features
+The system combines:
 
-* 🎤 Live microphone interaction
+* Speech-to-Text (STT)
+* Retrieval-Augmented Generation (RAG)
+* Large Language Models (LLM)
+* Text-to-Speech (TTS)
+* Telephony Integration
+
+to create a fully conversational AI voice assistant.
+
+---
+
+# 🚀 Features
+
+* 🎤 Real-time voice interaction
 * 🧠 AI conversational memory
-* 📄 PDF knowledge base (RAG)
-* 🔊 Natural voice responses
-* 🎓 College information assistant
-* 🔍 Semantic document search
+* 📄 PDF-based knowledge retrieval (RAG)
+* 🔍 Semantic search using FAISS vector database
+* 🔊 Natural AI voice responses
+* 💬 Continuous multi-turn conversations
+* 📞 Twilio phone call integration
+* 🌍 Public webhook support using ngrok
+* ⚡ Fast AI response generation using Groq
 
-## Tech Stack
+---
+
+# 🛠️ Technologies Used
+
+## Backend
 
 * Python
-* Deepgram
-* Groq
-* ElevenLabs
+* FastAPI
 * LangChain
-* FAISS
+
+## AI & LLM
+
+* Groq LLM
 * Sentence Transformers
 
-## How It Works
+## Voice Technologies
 
-Student speaks → Speech-to-Text → RAG Search → AI Reasoning → Voice Response
+* Deepgram (Speech-to-Text)
+* ElevenLabs (Text-to-Speech)
 
-## Installation
+## Database & Retrieval
+
+* FAISS Vector Database
+
+## Telephony
+
+* Twilio
+* ngrok
+
+---
+
+# 🧠 System Architecture
+
+Student Voice
+↓
+Speech-to-Text (Deepgram)
+↓
+RAG Semantic Search (FAISS)
+↓
+LLM Reasoning (Groq)
+↓
+Text-to-Speech (ElevenLabs)
+↓
+AI Voice Response
+
+---
+
+# 📞 Twilio Phone Call Integration
+
+The project supports real-time phone call interaction using Twilio and FastAPI.
+
+## Call Flow
+
+Student Call
+↓
+Twilio Phone Number
+↓
+ngrok Public URL
+↓
+FastAPI Voice Server
+↓
+AI Voice Assistant
+↓
+AI Voice Response to Caller
+
+---
+
+# 📚 Use Cases
+
+* College admission assistant
+* Student helpdesk automation
+* Academic information assistant
+* Campus support assistant
+* AI-powered educational support system
+
+---
+
+# 🔮 Future Improvements
+
+* Streamlit dashboard
+* LiveKit realtime streaming
+* Multi-language support
+* Cloud deployment
+* Admin analytics dashboard
+* Appointment booking system
+
+---
+
+# 📂 Project Structure
+
+```bash
+app/
+│
+├── college_voice_agent.py
+├── continuous_voice_agent.py
+├── memory_voice_agent.py
+├── rag_setup.py
+├── rag_chat.py
+├── twilio_server.py
+├── test_deepgram.py
+├── test_elevenlabs.py
+├── test_gemini.py
+│
+knowledge_base/
+│
+faiss_index/
+│
+README.md
+requirements.txt
+```
+
+---
+
+# ▶️ How to Run the Project
+
+## Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run the Assistant
+## Start FastAPI server
 
 ```bash
-python app/college_voice_agent.py
+uvicorn app.twilio_server:app --host 0.0.0.0 --port 8000
 ```
 
-## Future Improvements
+## Start ngrok
 
-* Streamlit dashboard
-* LiveKit realtime streaming
-* Twilio phone integration
-* Deployment on cloud
-* Admin dashboard
+```bash
+ngrok http 8000
+```
 
-## Author
+---
 
-Built by Abdul Zawid
+# 📞 Demo Phone Number
+
+Twilio Test Number:
+
+```text
++1 435 344 4214
+```
+
+(Note: This is a Twilio trial number used only for project demonstration.)
+
+---
+
+# 👨‍💻 Author
+
+## Abdul Zawid
+
+AI & Python Developer
+Built as an advanced AI-powered conversational voice assistant project using modern Generative AI technologies.
